@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD60FEE12FF396EA00E95758 /* ProblemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEDF2FF396EA00E95758 /* ProblemStore.swift */; };
+		FD60FEE22FF396EA00E95758 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEDC2FF396EA00E95758 /* LocaleManager.swift */; };
+		FD60FEE32FF396EA00E95758 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEE02FF396EA00E95758 /* Settings.swift */; };
+		FD60FEE42FF396EA00E95758 /* DependencyChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEDB2FF396EA00E95758 /* DependencyChecker.swift */; };
+		FD60FEE52FF396EA00E95758 /* PrintQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEDD2FF396EA00E95758 /* PrintQueueManager.swift */; };
+		FD60FEE62FF396EA00E95758 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEDE2FF396EA00E95758 /* Problem.swift */; };
+		FD60FEEB2FF3982200E95758 /* PlainTextWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEEA2FF3982200E95758 /* PlainTextWebView.swift */; };
+		FD60FEEC2FF3982200E95758 /* NonScrollingWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEE92FF3982200E95758 /* NonScrollingWebView.swift */; };
+		FD60FEED2FF3982200E95758 /* KaTeXWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEE72FF3982200E95758 /* KaTeXWebView.swift */; };
+		FD60FEEE2FF3982200E95758 /* LaTeXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FEE82FF3982200E95758 /* LaTeXParser.swift */; };
+		FD60FF012FF39A3400E95758 /* KaTeX_Fraktur-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF12FF39A3400E95758 /* KaTeX_Fraktur-Regular.woff2 */; };
+		FD60FF022FF39A3400E95758 /* KaTeX_Main-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF22FF39A3400E95758 /* KaTeX_Main-Bold.woff2 */; };
+		FD60FF032FF39A3400E95758 /* KaTeX_Math-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF62FF39A3400E95758 /* KaTeX_Math-BoldItalic.woff2 */; };
+		FD60FF042FF39A3400E95758 /* KaTeX_SansSerif-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF82FF39A3400E95758 /* KaTeX_SansSerif-Regular.woff2 */; };
+		FD60FF052FF39A3400E95758 /* KaTeX_Main-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF32FF39A3400E95758 /* KaTeX_Main-BoldItalic.woff2 */; };
+		FD60FF062FF39A3400E95758 /* KaTeX_Size2-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFA2FF39A3400E95758 /* KaTeX_Size2-Regular.woff2 */; };
+		FD60FF072FF39A3400E95758 /* KaTeX_Main-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF52FF39A3400E95758 /* KaTeX_Main-Regular.woff2 */; };
+		FD60FF082FF39A3400E95758 /* KaTeX_Caligraphic-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF02FF39A3400E95758 /* KaTeX_Caligraphic-Regular.woff2 */; };
+		FD60FF092FF39A3400E95758 /* katex.min.css in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFE2FF39A3400E95758 /* katex.min.css */; };
+		FD60FF0A2FF39A3400E95758 /* KaTeX_Size1-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF92FF39A3400E95758 /* KaTeX_Size1-Regular.woff2 */; };
+		FD60FF0B2FF39A3400E95758 /* katex.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFF2FF39A3400E95758 /* katex.min.js */; };
+		FD60FF0C2FF39A3400E95758 /* KaTeX_Main-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF42FF39A3400E95758 /* KaTeX_Main-Italic.woff2 */; };
+		FD60FF0D2FF39A3400E95758 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = FD60FF002FF39A3400E95758 /* template.html */; };
+		FD60FF0E2FF39A3400E95758 /* KaTeX_AMS-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEEF2FF39A3400E95758 /* KaTeX_AMS-Regular.woff2 */; };
+		FD60FF0F2FF39A3400E95758 /* KaTeX_Math-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEF72FF39A3400E95758 /* KaTeX_Math-Italic.woff2 */; };
+		FD60FF102FF39A3400E95758 /* KaTeX_Size3-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFB2FF39A3400E95758 /* KaTeX_Size3-Regular.woff2 */; };
+		FD60FF112FF39A3400E95758 /* KaTeX_Typewriter-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFD2FF39A3400E95758 /* KaTeX_Typewriter-Regular.woff2 */; };
+		FD60FF122FF39A3400E95758 /* KaTeX_Size4-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = FD60FEFC2FF39A3400E95758 /* KaTeX_Size4-Regular.woff2 */; };
+		FD60FF1A2FF3A07200E95758 /* ProblemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF162FF3A07200E95758 /* ProblemDetailView.swift */; };
+		FD60FF1B2FF3A07200E95758 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF192FF3A07200E95758 /* SettingsView.swift */; };
+		FD60FF1C2FF3A07200E95758 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF132FF3A07200E95758 /* AboutView.swift */; };
+		FD60FF1D2FF3A07200E95758 /* ProblemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF152FF3A07200E95758 /* ProblemCardView.swift */; };
+		FD60FF1E2FF3A07200E95758 /* ProblemEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF172FF3A07200E95758 /* ProblemEditorView.swift */; };
+		FD60FF1F2FF3A07200E95758 /* ProblemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD60FF182FF3A07200E95758 /* ProblemListView.swift */; };
+		FD9D98262FF4D4000034BBDB /* DeepSeekClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D98252FF4D4000034BBDB /* DeepSeekClient.swift */; };
+		FD9D98282FF4D4080034BBDB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D98272FF4D4080034BBDB /* KeychainManager.swift */; };
+		FD9D982A2FF4D4140034BBDB /* AISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D98292FF4D4140034BBDB /* AISettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD60FEB92FF394A800E95758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD60FEA32FF394A700E95758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD60FEAA2FF394A700E95758;
+			remoteInfo = MathAtlas;
+		};
+		FD60FEC32FF394A800E95758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD60FEA32FF394A700E95758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD60FEAA2FF394A700E95758;
+			remoteInfo = MathAtlas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD60FEAB2FF394A700E95758 /* MathAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD60FEB82FF394A800E95758 /* MathAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD60FEC22FF394A800E95758 /* MathAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD60FEDB2FF396EA00E95758 /* DependencyChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyChecker.swift; sourceTree = "<group>"; };
+		FD60FEDC2FF396EA00E95758 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
+		FD60FEDD2FF396EA00E95758 /* PrintQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintQueueManager.swift; sourceTree = "<group>"; };
+		FD60FEDE2FF396EA00E95758 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		FD60FEDF2FF396EA00E95758 /* ProblemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemStore.swift; sourceTree = "<group>"; };
+		FD60FEE02FF396EA00E95758 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FD60FEE72FF3982200E95758 /* KaTeXWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaTeXWebView.swift; sourceTree = "<group>"; };
+		FD60FEE82FF3982200E95758 /* LaTeXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaTeXParser.swift; sourceTree = "<group>"; };
+		FD60FEE92FF3982200E95758 /* NonScrollingWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonScrollingWebView.swift; sourceTree = "<group>"; };
+		FD60FEEA2FF3982200E95758 /* PlainTextWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTextWebView.swift; sourceTree = "<group>"; };
+		FD60FEEF2FF39A3400E95758 /* KaTeX_AMS-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEF02FF39A3400E95758 /* KaTeX_Caligraphic-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEF12FF39A3400E95758 /* KaTeX_Fraktur-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEF22FF39A3400E95758 /* KaTeX_Main-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.woff2"; sourceTree = "<group>"; };
+		FD60FEF32FF39A3400E95758 /* KaTeX_Main-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.woff2"; sourceTree = "<group>"; };
+		FD60FEF42FF39A3400E95758 /* KaTeX_Main-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.woff2"; sourceTree = "<group>"; };
+		FD60FEF52FF39A3400E95758 /* KaTeX_Main-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEF62FF39A3400E95758 /* KaTeX_Math-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.woff2"; sourceTree = "<group>"; };
+		FD60FEF72FF39A3400E95758 /* KaTeX_Math-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.woff2"; sourceTree = "<group>"; };
+		FD60FEF82FF39A3400E95758 /* KaTeX_SansSerif-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEF92FF39A3400E95758 /* KaTeX_Size1-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEFA2FF39A3400E95758 /* KaTeX_Size2-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEFB2FF39A3400E95758 /* KaTeX_Size3-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEFC2FF39A3400E95758 /* KaTeX_Size4-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEFD2FF39A3400E95758 /* KaTeX_Typewriter-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff2"; sourceTree = "<group>"; };
+		FD60FEFE2FF39A3400E95758 /* katex.min.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = katex.min.css; sourceTree = "<group>"; };
+		FD60FEFF2FF39A3400E95758 /* katex.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = katex.min.js; sourceTree = "<group>"; };
+		FD60FF002FF39A3400E95758 /* template.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
+		FD60FF132FF3A07200E95758 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		FD60FF152FF3A07200E95758 /* ProblemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCardView.swift; sourceTree = "<group>"; };
+		FD60FF162FF3A07200E95758 /* ProblemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailView.swift; sourceTree = "<group>"; };
+		FD60FF172FF3A07200E95758 /* ProblemEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemEditorView.swift; sourceTree = "<group>"; };
+		FD60FF182FF3A07200E95758 /* ProblemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemListView.swift; sourceTree = "<group>"; };
+		FD60FF192FF3A07200E95758 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FD9D98252FF4D4000034BBDB /* DeepSeekClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekClient.swift; sourceTree = "<group>"; };
+		FD9D98272FF4D4080034BBDB /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		FD9D98292FF4D4140034BBDB /* AISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FD60FEAD2FF394A700E95758 /* MathAtlas */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MathAtlas;
+			sourceTree = "<group>";
+		};
+		FD60FEBB2FF394A800E95758 /* MathAtlasTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MathAtlasTests;
+			sourceTree = "<group>";
+		};
+		FD60FEC52FF394A800E95758 /* MathAtlasUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MathAtlasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD60FEA82FF394A700E95758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEB52FF394A800E95758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEBF2FF394A800E95758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD60FEA22FF394A700E95758 = {
+			isa = PBXGroup;
+			children = (
+				FD60FEDA2FF3966800E95758 /* Resources */,
+				FD60FED92FF3965F00E95758 /* Components */,
+				FD60FED82FF3965500E95758 /* Views */,
+				FD60FED62FF3964200E95758 /* Models */,
+				FD60FEAD2FF394A700E95758 /* MathAtlas */,
+				FD60FEBB2FF394A800E95758 /* MathAtlasTests */,
+				FD60FEC52FF394A800E95758 /* MathAtlasUITests */,
+				FD60FEAC2FF394A700E95758 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD60FEAC2FF394A700E95758 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD60FEAB2FF394A700E95758 /* MathAtlas.app */,
+				FD60FEB82FF394A800E95758 /* MathAtlasTests.xctest */,
+				FD60FEC22FF394A800E95758 /* MathAtlasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD60FED62FF3964200E95758 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D98272FF4D4080034BBDB /* KeychainManager.swift */,
+				FD9D98252FF4D4000034BBDB /* DeepSeekClient.swift */,
+				FD60FEDB2FF396EA00E95758 /* DependencyChecker.swift */,
+				FD60FEDC2FF396EA00E95758 /* LocaleManager.swift */,
+				FD60FEDD2FF396EA00E95758 /* PrintQueueManager.swift */,
+				FD60FEDE2FF396EA00E95758 /* Problem.swift */,
+				FD60FEDF2FF396EA00E95758 /* ProblemStore.swift */,
+				FD60FEE02FF396EA00E95758 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD60FED82FF3965500E95758 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D98292FF4D4140034BBDB /* AISettingsView.swift */,
+				FD60FF132FF3A07200E95758 /* AboutView.swift */,
+				FD60FF152FF3A07200E95758 /* ProblemCardView.swift */,
+				FD60FF162FF3A07200E95758 /* ProblemDetailView.swift */,
+				FD60FF172FF3A07200E95758 /* ProblemEditorView.swift */,
+				FD60FF182FF3A07200E95758 /* ProblemListView.swift */,
+				FD60FF192FF3A07200E95758 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD60FED92FF3965F00E95758 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD60FEE72FF3982200E95758 /* KaTeXWebView.swift */,
+				FD60FEE82FF3982200E95758 /* LaTeXParser.swift */,
+				FD60FEE92FF3982200E95758 /* NonScrollingWebView.swift */,
+				FD60FEEA2FF3982200E95758 /* PlainTextWebView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FD60FEDA2FF3966800E95758 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD60FEEF2FF39A3400E95758 /* KaTeX_AMS-Regular.woff2 */,
+				FD60FEF02FF39A3400E95758 /* KaTeX_Caligraphic-Regular.woff2 */,
+				FD60FEF12FF39A3400E95758 /* KaTeX_Fraktur-Regular.woff2 */,
+				FD60FEF22FF39A3400E95758 /* KaTeX_Main-Bold.woff2 */,
+				FD60FEF32FF39A3400E95758 /* KaTeX_Main-BoldItalic.woff2 */,
+				FD60FEF42FF39A3400E95758 /* KaTeX_Main-Italic.woff2 */,
+				FD60FEF52FF39A3400E95758 /* KaTeX_Main-Regular.woff2 */,
+				FD60FEF62FF39A3400E95758 /* KaTeX_Math-BoldItalic.woff2 */,
+				FD60FEF72FF39A3400E95758 /* KaTeX_Math-Italic.woff2 */,
+				FD60FEF82FF39A3400E95758 /* KaTeX_SansSerif-Regular.woff2 */,
+				FD60FEF92FF39A3400E95758 /* KaTeX_Size1-Regular.woff2 */,
+				FD60FEFA2FF39A3400E95758 /* KaTeX_Size2-Regular.woff2 */,
+				FD60FEFB2FF39A3400E95758 /* KaTeX_Size3-Regular.woff2 */,
+				FD60FEFC2FF39A3400E95758 /* KaTeX_Size4-Regular.woff2 */,
+				FD60FEFD2FF39A3400E95758 /* KaTeX_Typewriter-Regular.woff2 */,
+				FD60FEFE2FF39A3400E95758 /* katex.min.css */,
+				FD60FEFF2FF39A3400E95758 /* katex.min.js */,
+				FD60FF002FF39A3400E95758 /* template.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD60FEAA2FF394A700E95758 /* MathAtlas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD60FECC2FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlas" */;
+			buildPhases = (
+				FD60FEA72FF394A700E95758 /* Sources */,
+				FD60FEA82FF394A700E95758 /* Frameworks */,
+				FD60FEA92FF394A700E95758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD60FEAD2FF394A700E95758 /* MathAtlas */,
+			);
+			name = MathAtlas;
+			packageProductDependencies = (
+			);
+			productName = MathAtlas;
+			productReference = FD60FEAB2FF394A700E95758 /* MathAtlas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD60FEB72FF394A800E95758 /* MathAtlasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD60FECF2FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlasTests" */;
+			buildPhases = (
+				FD60FEB42FF394A800E95758 /* Sources */,
+				FD60FEB52FF394A800E95758 /* Frameworks */,
+				FD60FEB62FF394A800E95758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD60FEBA2FF394A800E95758 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FD60FEBB2FF394A800E95758 /* MathAtlasTests */,
+			);
+			name = MathAtlasTests;
+			packageProductDependencies = (
+			);
+			productName = MathAtlasTests;
+			productReference = FD60FEB82FF394A800E95758 /* MathAtlasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD60FEC12FF394A800E95758 /* MathAtlasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD60FED22FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlasUITests" */;
+			buildPhases = (
+				FD60FEBE2FF394A800E95758 /* Sources */,
+				FD60FEBF2FF394A800E95758 /* Frameworks */,
+				FD60FEC02FF394A800E95758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD60FEC42FF394A800E95758 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FD60FEC52FF394A800E95758 /* MathAtlasUITests */,
+			);
+			name = MathAtlasUITests;
+			packageProductDependencies = (
+			);
+			productName = MathAtlasUITests;
+			productReference = FD60FEC22FF394A800E95758 /* MathAtlasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD60FEA32FF394A700E95758 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					FD60FEAA2FF394A700E95758 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					FD60FEB72FF394A800E95758 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = FD60FEAA2FF394A700E95758;
+					};
+					FD60FEC12FF394A800E95758 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = FD60FEAA2FF394A700E95758;
+					};
+				};
+			};
+			buildConfigurationList = FD60FEA62FF394A700E95758 /* Build configuration list for PBXProject "MathAtlas" */;
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = FD60FEA22FF394A700E95758;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FD60FEAC2FF394A700E95758 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD60FEAA2FF394A700E95758 /* MathAtlas */,
+				FD60FEB72FF394A800E95758 /* MathAtlasTests */,
+				FD60FEC12FF394A800E95758 /* MathAtlasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD60FEA92FF394A700E95758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD60FF012FF39A3400E95758 /* KaTeX_Fraktur-Regular.woff2 in Resources */,
+				FD60FF022FF39A3400E95758 /* KaTeX_Main-Bold.woff2 in Resources */,
+				FD60FF032FF39A3400E95758 /* KaTeX_Math-BoldItalic.woff2 in Resources */,
+				FD60FF042FF39A3400E95758 /* KaTeX_SansSerif-Regular.woff2 in Resources */,
+				FD60FF052FF39A3400E95758 /* KaTeX_Main-BoldItalic.woff2 in Resources */,
+				FD60FF062FF39A3400E95758 /* KaTeX_Size2-Regular.woff2 in Resources */,
+				FD60FF072FF39A3400E95758 /* KaTeX_Main-Regular.woff2 in Resources */,
+				FD60FF082FF39A3400E95758 /* KaTeX_Caligraphic-Regular.woff2 in Resources */,
+				FD60FF092FF39A3400E95758 /* katex.min.css in Resources */,
+				FD60FF0A2FF39A3400E95758 /* KaTeX_Size1-Regular.woff2 in Resources */,
+				FD60FF0B2FF39A3400E95758 /* katex.min.js in Resources */,
+				FD60FF0C2FF39A3400E95758 /* KaTeX_Main-Italic.woff2 in Resources */,
+				FD60FF0D2FF39A3400E95758 /* template.html in Resources */,
+				FD60FF0E2FF39A3400E95758 /* KaTeX_AMS-Regular.woff2 in Resources */,
+				FD60FF0F2FF39A3400E95758 /* KaTeX_Math-Italic.woff2 in Resources */,
+				FD60FF102FF39A3400E95758 /* KaTeX_Size3-Regular.woff2 in Resources */,
+				FD60FF112FF39A3400E95758 /* KaTeX_Typewriter-Regular.woff2 in Resources */,
+				FD60FF122FF39A3400E95758 /* KaTeX_Size4-Regular.woff2 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEB62FF394A800E95758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEC02FF394A800E95758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD60FEA72FF394A700E95758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD60FEEB2FF3982200E95758 /* PlainTextWebView.swift in Sources */,
+				FD60FEEC2FF3982200E95758 /* NonScrollingWebView.swift in Sources */,
+				FD60FEED2FF3982200E95758 /* KaTeXWebView.swift in Sources */,
+				FD9D98262FF4D4000034BBDB /* DeepSeekClient.swift in Sources */,
+				FD60FEEE2FF3982200E95758 /* LaTeXParser.swift in Sources */,
+				FD60FEE12FF396EA00E95758 /* ProblemStore.swift in Sources */,
+				FD60FEE22FF396EA00E95758 /* LocaleManager.swift in Sources */,
+				FD60FEE32FF396EA00E95758 /* Settings.swift in Sources */,
+				FD9D982A2FF4D4140034BBDB /* AISettingsView.swift in Sources */,
+				FD60FEE42FF396EA00E95758 /* DependencyChecker.swift in Sources */,
+				FD60FEE52FF396EA00E95758 /* PrintQueueManager.swift in Sources */,
+				FD60FEE62FF396EA00E95758 /* Problem.swift in Sources */,
+				FD60FF1A2FF3A07200E95758 /* ProblemDetailView.swift in Sources */,
+				FD60FF1B2FF3A07200E95758 /* SettingsView.swift in Sources */,
+				FD60FF1C2FF3A07200E95758 /* AboutView.swift in Sources */,
+				FD60FF1D2FF3A07200E95758 /* ProblemCardView.swift in Sources */,
+				FD60FF1E2FF3A07200E95758 /* ProblemEditorView.swift in Sources */,
+				FD60FF1F2FF3A07200E95758 /* ProblemListView.swift in Sources */,
+				FD9D98282FF4D4080034BBDB /* KeychainManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEB42FF394A800E95758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD60FEBE2FF394A800E95758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD60FEBA2FF394A800E95758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD60FEAA2FF394A700E95758 /* MathAtlas */;
+			targetProxy = FD60FEB92FF394A800E95758 /* PBXContainerItemProxy */;
+		};
+		FD60FEC42FF394A800E95758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD60FEAA2FF394A700E95758 /* MathAtlas */;
+			targetProxy = FD60FEC32FF394A800E95758 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FD60FECA2FF394A800E95758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD60FECB2FF394A800E95758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FD60FECD2FF394A800E95758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.trustedinstaller.MathAtlas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD60FECE2FF394A800E95758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_STANDALONE_ICON_BEHAVIOR = default;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.trustedinstaller.MathAtlas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FD60FED02FF394A800E95758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrustedInstaller64.MathAtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathAtlas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MathAtlas";
+			};
+			name = Debug;
+		};
+		FD60FED12FF394A800E95758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrustedInstaller64.MathAtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathAtlas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MathAtlas";
+			};
+			name = Release;
+		};
+		FD60FED32FF394A800E95758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrustedInstaller64.MathAtlasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MathAtlas;
+			};
+			name = Debug;
+		};
+		FD60FED42FF394A800E95758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK29F8V39J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TrustedInstaller64.MathAtlasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MathAtlas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD60FEA62FF394A700E95758 /* Build configuration list for PBXProject "MathAtlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD60FECA2FF394A800E95758 /* Debug */,
+				FD60FECB2FF394A800E95758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD60FECC2FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD60FECD2FF394A800E95758 /* Debug */,
+				FD60FECE2FF394A800E95758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD60FECF2FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD60FED02FF394A800E95758 /* Debug */,
+				FD60FED12FF394A800E95758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD60FED22FF394A800E95758 /* Build configuration list for PBXNativeTarget "MathAtlasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD60FED32FF394A800E95758 /* Debug */,
+				FD60FED42FF394A800E95758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD60FEA32FF394A700E95758 /* Project object */;
+}

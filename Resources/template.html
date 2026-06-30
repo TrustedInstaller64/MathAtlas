@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="katex.min.css">
+<style>
+:root {
+    --fg: #1a1a1a;
+    --fg2: #666;
+    --bg: #fff;
+    --bd: #e5e5e5;
+    --muted: #999;
+}
+@media (prefers-color-scheme: dark) {
+    :root { --fg: #e5e5e5; --fg2: #aaa; --bg: #1a1a1a; --bd: #333; --muted: #888; }
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: "Noto Serif SC", "STSong", "Songti SC", serif;
+    font-size: 15px; line-height: 1.85; color: var(--fg);
+    padding: 12px;
+    -webkit-text-size-adjust: none;
+}
+.prob { word-wrap: break-word; }
+.mi { display: inline; }
+.md { display: block; margin: 6px 0; }
+.lst { margin: 6px 0 6px 4px; padding:0; list-style:none; }
+.lst li { display:flex; gap:6px; margin-bottom:5px; }
+.ln { flex-shrink:0; font-weight:500; color:var(--muted); min-width:24px; text-align:right; }
+.lc { flex:1; min-width:0; }
+.tw { overflow-x:auto; margin:8px 0; }
+.tw table { border-collapse:collapse; margin:0 auto; font-size:14px; }
+.tw td { border:1px solid var(--bd); padding:4px 10px; text-align:center; white-space:nowrap; }
+.tac { text-align:center; }
+.bl { display:inline-block; min-width:3rem; border-bottom:1px solid; margin:0 2px; vertical-align:middle;
+      opacity:0.6; }
+.katex { font-size:1.1em; }
+.katex-display { margin:4px 0 !important; }
+</style>
+</head>
+<body>
+<div id="content"></div>
+<script src="katex.min.js"></script>
+<script>
+window.onerror = function(msg, url, line) {
+    window.webkit.messageHandlers.height.postMessage(-1);
+    console.error('JS Error:', msg, url, line);
+};
+
+function renderContent(html) {
+    var el = document.getElementById('content');
+    if (!el) { window.webkit.messageHandlers.height.postMessage(-2); return; }
+    el.innerHTML = html;
+    try {
+        renderMath(el);
+    } catch(e) {
+        el.innerHTML += '<pre style="color:red">JS Error: ' + e.message + '</pre>';
+    }
+    reportSize();
+}
+
+function renderMath(root) {
+    var inlines = root.querySelectorAll('.mi');
+    for (var i = 0; i < inlines.length; i++) {
+        try {
+            katex.render(inlines[i].textContent, inlines[i], {
+                displayMode: false, throwOnError: false, strict: false, trust: true
+            });
+        } catch(e) { inlines[i].textContent = '[公式错误]'; }
+    }
+    var displays = root.querySelectorAll('.md');
+    for (var j = 0; j < displays.length; j++) {
+        try {
+            katex.render(displays[j].textContent, displays[j], {
+                displayMode: true, throwOnError: false, strict: false, trust: true
+            });
+        } catch(e) { displays[j].textContent = '[公式错误]'; }
+    }
+}
+
+function reportSize() {
+    window.webkit.messageHandlers.height.postMessage(document.body.scrollHeight);
+}
+</script>
+</body>
+</html>
